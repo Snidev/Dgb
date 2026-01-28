@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgb", "Dgb\Dgb.csproj", "{2D38F4A7-1EB9-4D49-9735-75DB842B5A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DgbTest", "DgbTest\DgbTest.csproj", "{178E1A3B-92A2-4729-AB87-A62CD43E1272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D38F4A7-1EB9-4D49-9735-75DB842B5A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D38F4A7-1EB9-4D49-9735-75DB842B5A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D38F4A7-1EB9-4D49-9735-75DB842B5A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D38F4A7-1EB9-4D49-9735-75DB842B5A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178E1A3B-92A2-4729-AB87-A62CD43E1272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178E1A3B-92A2-4729-AB87-A62CD43E1272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178E1A3B-92A2-4729-AB87-A62CD43E1272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178E1A3B-92A2-4729-AB87-A62CD43E1272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
