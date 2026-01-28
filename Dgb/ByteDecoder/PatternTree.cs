@@ -3,13 +3,16 @@ using Dgb.Core.Cpu;
 
 namespace Dgb.ByteDecoder;
 
-// Possible optimization: Frozen version of collection using contiguous storage
+// Possible optimizations: Frozen version of collection using contiguous storage instead of a list, and replace
+// recursion with loops. 
+// The "frozen" pattern tree would be immutable as the name implies, and forgo the recursive node classes for cache
+// friendly navigable arrays. This isn't necessary yet but is good to keep in mind as Test is a very hot spot
 public class PatternTree
 {
     public delegate void Callback(Processor proc, BytePattern pattern, byte opcode);
     
-    private Dictionary<byte, BytePattern> _constants = new();
-    private List<Node> _heads = new();
+    private readonly Dictionary<byte, BytePattern> _constants = new();
+    private readonly List<Node> _heads = new();
     
     public bool Test(byte value, [NotNullWhen(true)] out BytePattern? pattern)
     {
