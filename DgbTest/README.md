@@ -8,7 +8,7 @@ however links to them will be provided.
 
 The project expects these test files to be located in the TestData directory
 
-- [Blargg's](https://github.com/retrio/gb-test-roms) cpu_test roms were used 
+- [Blargg's](https://github.com/retrio/gb-test-roms) cpu_instrs roms were used 
 in conjunction with [execution logs provided by Peach](https://github.com/wheremyfoodat/Gameboy-logs).
 In order for these tests to function properly the .gb rom and .txt log file 
 share the same name eg: 01-special.gb will be loaded alongside 01-special.txt
