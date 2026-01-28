@@ -1,0 +1,68 @@
+using Dgb.Core.Bus;
+
+namespace DgbTest;
+
+public class BasicBus : IBusConnection
+{
+    public byte[] Data;
+        
+    public byte ReadByte(ushort addr)
+    {
+        return Data[addr];
+    }
+
+    public void WriteByte(ushort addr, byte value)
+    {
+        if (addr == 0xFF01)
+            Console.Write((char)value);
+        
+        Data[addr] = value;
+    }
+
+    public BasicBus()
+    {
+        Data = new byte[0x10000];
+        Data[0xFF00] = 0xCF;
+        Data[0xFF01] = 0x00;
+        Data[0xFF02] = 0x7E;
+        Data[0xFF04] = 0x18;
+        Data[0xFF05] = 0x00;
+        Data[0xFF06] = 0x00;
+        Data[0xFF07] = 0xF8;
+        Data[0xFF0F] = 0xE1;
+        Data[0xFF10] = 0x80;
+        Data[0xFF11] = 0xBF;
+        Data[0xFF12] = 0xF3;
+        Data[0xFF13] = 0xFF;
+        Data[0xFF14] = 0xBF;
+        Data[0xFF16] = 0x3F;
+        Data[0xFF17] = 0x00;
+        Data[0xFF18] = 0xFF;
+        Data[0xFF19] = 0xBF;
+        Data[0xFF1A] = 0x7F;
+        Data[0xFF1B] = 0xFF;
+        Data[0xFF1C] = 0x9F;
+        Data[0xFF1D] = 0xFF;
+        Data[0xFF1E] = 0xBF;
+        Data[0xFF20] = 0xFF;
+        Data[0xFF21] = 0x00;
+        Data[0xFF22] = 0x00;
+        Data[0xFF23] = 0xBF;
+        Data[0xFF24] = 0x77;
+        Data[0xFF25] = 0xF3;
+        Data[0xFF26] = 0xF1;
+        Data[0xFF40] = 0x91;
+        Data[0xFF41] = 0x81;
+        Data[0xFF42] = 0x00;
+        Data[0xFF43] = 0x00;
+        Data[0xFF44] = 0x90;
+        Data[0xFF45] = 0x00;
+        Data[0xFF46] = 0xFF;
+        Data[0xFF47] = 0xFC;
+        Data[0xFF48] = 0x00;
+        Data[0xFF49] = 0x00;
+        Data[0xFF4A] = 0x00;
+        Data[0xFF4B] = 0x00;
+        Data[0xFFFF] = 0x00;
+    }
+}
